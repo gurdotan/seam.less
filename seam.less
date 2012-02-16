@@ -1,0 +1,31 @@
+/* user-select is not part of the W3C spec */
+.user-select(@val) {
+    -webkit-user-select: @val;
+    -moz-user-select: @val;
+    -ms-user-select: @val;
+}
+.unselectable {
+    .user-select(none);
+}
+
+/*==============  Layout  ==============*/
+.box(@orient: horizontal, @pack: start, @align: stretch) {
+	display: -webkit-box;
+	-webkit-box-orient: @orient;
+	-webkit-box-pack: @pack;
+	-webkit-box-align: @align;
+	display: -moz-box;
+	-moz-box-orient: @orient;
+	-moz-box-pack: @pack;
+	-moz-box-align: @align;
+	display: box;
+	box-orient: @orient;
+	box-pack: @pack;
+	box-align: @align;
+}
+
+.box-flex(@value: 0) {
+    -webkit-box-flex: @value;
+    -moz-box-flex: @value;
+    box-flex: @value;
+}
